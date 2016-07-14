@@ -36,7 +36,7 @@ router.register(r'localisations', LocalisationViewSet)
 router.register(r'origines', OrigineViewSet)
 router.register(r'ressources', RessourceViewSet)
 
-admin.site.site_header = 'Lighty Dmap %s' % version
+admin.site.site_header = 'Dofus Inventory %s' % version
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
