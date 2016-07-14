@@ -1,0 +1,36 @@
+- fields: {description: Zone de tutoriel de Dofus, nom: Incarnam}
+  model: inventaire.carte
+  pk: 1
+- fields: {description: "Notre bon vieux et tr\xE8s imposant territoire d'Amakna,\
+      \ terre d'aventures !", nom: Amakna}
+  model: inventaire.carte
+  pk: 2
+- fields: {description: "Premi\xE8re dimension divine \xE0 avoir \xE9t\xE9 d\xE9couverte.\
+      \ Elle renferme de nombreux tr\xE9sors.", nom: Enutrosor}
+  model: inventaire.carte
+  pk: 3
+- fields: {description: "La confr\xE9rie des Voleurs en un condens\xE9 dimensionnel\
+      \ hors du commun.", nom: Srambad}
+  model: inventaire.carte
+  pk: 4
+- fields: {description: "On y passe un temps fou\u2026", nom: "X\xE9lorium"}
+  model: inventaire.carte
+  pk: 5
+- fields: {description: "Chatperlipopette, une nouvelle dimension !", nom: "Ecaflipus"}
+  model: inventaire.carte
+  pk: 6
+- fields: {description: "D'origine officielle, c'est \xE0 dire valid\xE9 par notre\
+      \ staff.", nom: LOCAL, unique_id: ''}
+  model: inventaire.origine
+  pk: 1
+- fields: {description: A pour origine notre ancienne version de Lighty Dmap, nom: DMAP,
+    unique_id: ''}
+  model: inventaire.origine
+  pk: 2
+- fields: {description: "Provient d'une interface Web.", nom: WEB, unique_id: ''}
+  model: inventaire.origine
+  pk: 3
+- fields: {description: Estimation recueillies par un concurrent notoire., nom: EH,
+    unique_id: ''}
+  model: inventaire.origine
+  pk: 4

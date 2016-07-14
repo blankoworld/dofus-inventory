@@ -1,0 +1,7 @@
+Django==1.9
+pyyaml
+uwsgi
+# REST API dependancies   
+djangorestframework
+markdown
+django-filter

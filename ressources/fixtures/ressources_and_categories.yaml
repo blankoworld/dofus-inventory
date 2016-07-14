@@ -1,0 +1,963 @@
+- model: ressources.categorie
+  pk: 1
+  fields: {code: divers, nom: Divers, description: "Ensemble de ressources diverses\
+      \ qui ne pourraient se ranger dans une cat\xE9gorie fondamentale.", parente: null}
+- model: ressources.categorie
+  pk: 2
+  fields: {code: transport, nom: Transports, description: Ensemble de mode de transports,
+    parente: 1}
+- model: ressources.categorie
+  pk: 3
+  fields: {code: batiment, nom: "B\xE2timent", description: "Sauf si \xE0 d\xE9couvert\
+      \ (certains ateliers), nous avons un toit sur la t\xEAte !", parente: 1}
+- model: ressources.categorie
+  pk: 4
+  fields: {code: autre, nom: Autre, description: "Bah oui, dans une cat\xE9gorie Divers,\
+      \ on trouve diverses choses. Comme \"Autre\".", parente: 1}
+- model: ressources.categorie
+  pk: 5
+  fields: {code: fleur, nom: Fleurs, description: De quoi animer vos narines., parente: 10}
+- model: ressources.categorie
+  pk: 6
+  fields: {code: bois, nom: Bois, description: "\xC7a cogne dur !", parente: 11}
+- model: ressources.categorie
+  pk: 7
+  fields: {code: minerai, nom: Minerai, description: "Gratte, gratte, gratte. Peut-\xEA\
+      tre que tu auras de la chance de tomber sur un filon.", parente: 12}
+- model: ressources.categorie
+  pk: 8
+  fields: {code: cereale, nom: "C\xE9r\xE9ales", description: "Pour obtenir un bon\
+      \ petit d\xE9jeuner, ou de quoi nourrir la famille.", parente: 13}
+- model: ressources.categorie
+  pk: 9
+  fields: {code: poisson, nom: Poissons, description: "\xC7a fr\xE9tille toujours\
+      \ hors de l'eau. \xC7a a meilleur go\xFBt dans l'assiette cependant, ou pour\
+      \ vos Dragodindes.", parente: 14}
+- model: ressources.categorie
+  pk: 10
+  fields: {code: alchimiste, nom: Alchimiste, description: "Celui qui traite les plantes\
+      \ et les fleurs pour cr\xE9er des concoctions de tous genres.", parente: null}
+- model: ressources.categorie
+  pk: 11
+  fields: {code: bucheron, nom: "B\xFBcheron", description: Couper du bois. Encore
+      et encore., parente: null}
+- model: ressources.categorie
+  pk: 12
+  fields: {code: mineur, nom: Mineur, description: Celui qui pioche dans les mines.
+      Encore et encore., parente: null}
+- model: ressources.categorie
+  pk: 13
+  fields: {code: paysan, nom: Paysan, description: "Le C\xE9r\xE9ale Killer du groupe.",
+    parente: null}
+- model: ressources.categorie
+  pk: 14
+  fields: {code: pecheur, nom: "P\xEAcheur", description: "Pour certains la vie ne\
+      \ tient qu'\xE0 un fil. C'est son cas.", parente: null}
+- model: ressources.categorie
+  pk: 15
+  fields: {code: plante, nom: Plante, description: "\xC7a d\xE9pote !", parente: 10}
+- model: ressources.categorie
+  pk: 16
+  fields: {code: graine, nom: Graine, description: "O\xF9 as-tu encore fourr\xE9 ton\
+      \ bec ?!", parente: 10}
+- model: ressources.categorie
+  pk: 17
+  fields: {code: special, nom: "Sp\xE9cial", description: "Caract\xE8re sp\xE9cial\
+      \ qui ne DOIT PAS \xEAtre affich\xE9 \xE0 l'utilisateur sur une carte. Mais\
+      \ utile pour la saisie/validation.", parente: null}
+- model: ressources.ressource
+  pk: 1
+  fields:
+    code: puit
+    nom: Puits
+    description: "Permet de r\xE9cup\xE9rer quelques seaux d'eau"
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 2
+  fields:
+    code: poubelle
+    nom: Poubelle
+    description: "Un endroit o\xF9 jeter des ressources mais aussi, parfois, d'en\
+      \ r\xE9cup\xE9rer"
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 3
+  fields:
+    code: rp
+    nom: Salle pour JdR
+    description: "Salle ou carte libre permettant de jouer \xE0 du Jeu de R\xF4le"
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 4
+  fields:
+    code: zaap
+    nom: Zaap
+    description: "Portail de t\xE9l\xE9portation utilis\xE9 couramment par les joueurs"
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 5
+  fields:
+    code: zaapi
+    nom: Zaapi
+    description: "Sous ensemble d'\xE9l\xE9ments permettant de se d\xE9placer plus\
+      \ rapidement (un peu comme les Zaap).\r\n\r\nSe pr\xE9sente sous diff\xE9rentes\
+      \ formes : des dragodindes \xE0 Bonta/Brakmar ou encore des b\xE2teaux \xE0\
+      \ Sufokia."
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 6
+  fields:
+    code: phenix
+    nom: "Statue Ph\xE9nix"
+    description: "Une statue avec un Ph\xE9nix dessus. Utilis\xE9 principalement pour\
+      \ reprendre forme humaine quand nous sommes un fant\xF4me."
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 7
+  fields:
+    code: atelier
+    nom: Atelier
+    description: "Endroit o\xF9 la cr\xE9ation d'objet \xE0 partir de ressources est\
+      \ possible"
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 8
+  fields:
+    code: banque
+    nom: Banque
+    description: "De quoi d\xE9poser/retirer sous/ressources chez un Hibou de confiance.\
+      \ C'est chouette !"
+    dofus_id: ''
+    categories: []
+- model: ressources.ressource
+  pk: 9
+  fields:
+    code: cadeau
+    nom: Paquet Cadeau
+    description: "Sur l'\xEEle de Nowel, quoi de mieux qu'un beau cadeau pour \xE9\
+      gayer la journ\xE9e !"
+    dofus_id: ''
+    categories: [4]
+- model: ressources.ressource
+  pk: 10
+  fields:
+    code: belladone
+    nom: Belladone
+    description: "Autrefois populaire chez les disciples d\u2019Otoma\xEF, la culture\
+      \ de cette plante a \xE9t\xE9 abandonn\xE9e \xE0 cause de nombreux accidents\
+      \ mortels provoqu\xE9s par son ingestion. Depuis, il est commun de voir des\
+      \ alchimistes au service de Sram sur l\u2019\xEEle."
+    dofus_id: '16387'
+    categories: [5]
+- model: ressources.ressource
+  pk: 11
+  fields:
+    code: edelweiss
+    nom: Edelweiss
+    description: "Cette fleur est d'une raret\xE9 et d'une beaut\xE9 inimaginables,\
+      \ mais elle est presque introuvable. Pour cause, sa magie est si puissante qu'elle\
+      \ serait capable de faire revivre certains morts."
+    dofus_id: '594'
+    categories: [5]
+- model: ressources.ressource
+  pk: 12
+  fields:
+    code: ginseng
+    nom: Ginseng
+    description: "La racine de cette plante sert de rem\xE8de universel chez les Kannibouls\
+      \ de l\u2019\xEEle de Moon."
+    dofus_id: '16385'
+    categories: [15]
+- model: ressources.ressource
+  pk: 13
+  fields:
+    code: mandragore
+    nom: Mandragore
+    description: "Autrefois, cette plante poussait exclusivement aux pieds des pendus.\
+      \ \xC0 pr\xE9sent, elle a diversifi\xE9 son activit\xE9 et on la trouve un peu\
+      \ partout dans les cimeti\xE8res."
+    dofus_id: '16389'
+    categories: [15]
+- model: ressources.ressource
+  pk: 14
+  fields:
+    code: menthe
+    nom: Menthe Sauvage
+    description: "C'est l'aliment de base de la Gel\xE9e Verte, si vous sentez une\
+      \ odeur de menthe, n'en d\xE9duisez donc pas obligatoirement qu'il y a de la\
+      \ menthe pr\xE8s de vous."
+    dofus_id: '380'
+    categories: [15]
+- model: ressources.ressource
+  pk: 15
+  fields:
+    code: orchidee
+    nom: "Orchid\xE9e Freyesque"
+    description: "Cette fleur est d'une raret\xE9 et d'une beaut\xE9 inimaginables,\
+      \ mais elle est presque introuvable. En effet, les Crapauds ont tendance \xE0\
+      \ les ramener dans leur campement pour nourrir leur prog\xE9niture."
+    dofus_id: '593'
+    categories: [5]
+- model: ressources.ressource
+  pk: 16
+  fields:
+    code: ortie
+    nom: Ortie
+    description: "\xC0 chacun de ses anniversaires, il est de coutume de pousser m\xE9\
+      m\xE9 dans un champ de cette plante."
+    dofus_id: '421'
+    categories: [15]
+- model: ressources.ressource
+  pk: 17
+  fields:
+    code: pandouille
+    nom: Graine de Pandouille
+    description: "Cette \xE9norme graine est gorg\xE9e d'une huile indigeste, mais\
+      \ magique. Sa coquille est r\xE9put\xE9e incassable, de nombreux artisans s'en\
+      \ servent pour enchanter des armes, et d'autres l'utilisent comme cochonnet\
+      \ magique pour jouer aux boules."
+    dofus_id: '7059'
+    categories: [16]
+- model: ressources.ressource
+  pk: 18
+  fields:
+    code: perce-neige
+    nom: Perce-Neige
+    description: "Endurcie au climat de Frigost, cette superbe fleur est plus r\xE9\
+      sistante que son aspect fragile le suppose. Sa r\xE9colte est toutefois d\xE9\
+      licate pour en pr\xE9server toutes les propri\xE9t\xE9s alchimiques."
+    dofus_id: '11102'
+    categories: [5]
+- model: ressources.ressource
+  pk: 19
+  fields:
+    code: sauge
+    nom: Sauge
+    description: "Cette fleur permet de faire des potions aux effets al\xE9atoires,\
+      \ qui peuvent aller de la paralysie totale \xE0 l'invuln\xE9rabilit\xE9 aux\
+      \ gaz de Wabbits."
+    dofus_id: '428'
+    categories: [15]
+- model: ressources.ressource
+  pk: 20
+  fields:
+    code: trefles
+    nom: "Tr\xE8fle \xE0 5 feuilles"
+    description: "Ce tr\xE8fle constitue un \xE9l\xE9ment essentiel de la nourriture\
+      \ des Tabis. Les \xE9leveurs font tout de m\xEAme attention dans la mesure o\xF9\
+      \ le Tr\xE8fle \xE0 5 feuilles provoque des ballonnements."
+    dofus_id: '395'
+    categories: [15]
+- model: ressources.ressource
+  pk: 21
+  fields:
+    code: bambou
+    nom: Bambou
+    description: "Contrairement aux roseaux, le bambou plie et casse. Heureusement,\
+      \ ce sont souvent les dents des aventuriers imprudents qui cassent sous les\
+      \ coups de bambous. Parfois, m\xEAme la nature se met au service des dentistes\
+      \ sans scrupules."
+    dofus_id: '7013'
+    categories: [6]
+- model: ressources.ressource
+  pk: 22
+  fields:
+    code: bambou_sacre
+    nom: "Bambou Sacr\xE9"
+    description: "Contrairement aux apparences, ce bois est sacr\xE9. Seuls les meilleurs\
+      \ Pandawas, ont normalement acc\xE8s \xE0 la coupe de ce bois, mais il arrive\
+      \ parfois que des touristes b\xFBcherons, ne se g\xEAnent pas pour repartir\
+      \ avec un souvenir local, de leur voyage sur l'\xEEle de Pandala. On parle alors\
+      \ de \"sacr\xE9s touristes\"."
+    dofus_id: '7014'
+    categories: [6]
+- model: ressources.ressource
+  pk: 23
+  fields:
+    code: bambou_sombre
+    nom: Bambou Sombre
+    description: "Galthouze le jeune Pandawa avait un jour demand\xE9 \xE0 son p\xE8\
+      re \"Quelle est la diff\xE9rence entre le Bambou, et le Bambou Sombre papa ?\"\
+      . Il se prit une bonne claque bien m\xE9rit\xE9e dans la t\xEAte pour avoir\
+      \ pos\xE9 une question aussi stupide, tout le monde sait que ce qui diff\xE9\
+      rencie le Bambou du Bambou Sombre, c'est la taille de leurs graines."
+    dofus_id: '7016'
+    categories: [6]
+- model: ressources.ressource
+  pk: 24
+  fields:
+    code: bombu
+    nom: Bombu
+    description: "Ce Bois est le plus tendre de tous. Il est mal\xE9able \xE0 souhait\
+      \ et procure de r\xE9els plaisirs \xE0 travailler."
+    dofus_id: '2358'
+    categories: [6]
+- model: ressources.ressource
+  pk: 25
+  fields:
+    code: charme
+    nom: Charme
+    description: "Le Bois de Charme doit son nom aux Sadidas, qui s'accouplent toujours\
+      \ sous les Charmes, pour des raisons qui ne sont r\xE9v\xE9l\xE9es que dans\
+      \ le livre du Bwork Mage."
+    dofus_id: '472'
+    categories: [6]
+- model: ressources.ressource
+  pk: 26
+  fields:
+    code: chataignier
+    nom: "Chata\xEEgnier"
+    description: "L'odeur du Bois de Ch\xE2taignier repousse les mouches, sauf celles\
+      \ qui aiment les ch\xE2taignes et celles qui ont perdu l'odorat, ce qui explique\
+      \ pourquoi l'odeur du bois de Ch\xE2taignier ne repousse en fait aucune mouche."
+    dofus_id: '473'
+    categories: [6]
+- model: ressources.ressource
+  pk: 27
+  fields:
+    code: chene
+    nom: "Ch\xEAne"
+    description: "Ce bois d'excellente qualit\xE9 est particuli\xE8rement r\xE9sistant,\
+      \ il permet de faire presque tout, des gourdins, des maisons ou encore des bateaux,\
+      \ mais la meilleure fa\xE7on d'utiliser ce bois reste d'en faire des f\xFBts\
+      \ \xE0 bi\xE8re (Hips !)."
+    dofus_id: '460'
+    categories: [6]
+- model: ressources.ressource
+  pk: 28
+  fields:
+    code: ebene
+    nom: "\xC9b\xE8ne"
+    description: "Ce bois tient son nom d'un malentendu, il y a bien longtemps, la\
+      \ seule famille de B\xFBcherons qui savait o\xF9 se trouvaient ces arbres, s'appelait\
+      \ Baine, et partout, on parlait du \"Bois des Baine\", \xE0 force d'\xE9crire\
+      \ n'importe comment voici ce qui arrive."
+    dofus_id: '449'
+    categories: [6]
+- model: ressources.ressource
+  pk: 29
+  fields:
+    code: erable
+    nom: "\xC9rable"
+    description: "Les feuilles d'Erable ont permis \xE0 des gens peu inspir\xE9s de\
+      \ se faire un drapeau original, le sirop d'Erable a permis de donner du go\xFB\
+      t aux cr\xEApes. Quant \xE0 son bois, on cherche encore \xE0 quoi il peut bien\
+      \ servir."
+    dofus_id: '471'
+    categories: [6]
+- model: ressources.ressource
+  pk: 30
+  fields:
+    code: frene
+    nom: "Fr\xEAne"
+    description: "Le Bois de Fr\xEAne n'est pas un bois de qualit\xE9, mais il est\
+      \ abondant et pousse relativement vite. Attention tout de m\xEAme \xE0 ne pas\
+      \ le stocker pr\xE8s d'une forte source de chaleur, il est inflammable."
+    dofus_id: '303'
+    categories: [6]
+- model: ressources.ressource
+  pk: 31
+  fields:
+    code: if
+    nom: If
+    description: "Ce bois particuli\xE8rement souple ne casse jamais, ce qui en fait\
+      \ un bois de choix pour la r\xE9alisation d'arcs. Il est en revanche difficile\
+      \ \xE0 trouver, les paysans d'Amakna ayant tendance \xE0 tuer les jeunes pousses\
+      \ d'If qui rendent malades leurs Bouftous."
+    dofus_id: '461'
+    categories: [6]
+- model: ressources.ressource
+  pk: 32
+  fields:
+    code: kaliptus
+    nom: Kaliptus
+    description: "Ce bois parfum\xE9 permet de construire des maisons qui sentent\
+      \ bon, m\xEAme si leurs propri\xE9taires sentent mauvais. Malheureusement, ce\
+      \ bois n'est pas assez souple pour la confection des sous-v\xEAtements."
+    dofus_id: '7925'
+    categories: [6]
+- model: ressources.ressource
+  pk: 33
+  fields:
+    code: merisier
+    nom: Merisier
+    description: "Ce bois est recherch\xE9 en \xE9b\xE9nisterie du fait de sa texture\
+      \ compacte et de sa couleur brun rouge\xE2tre qu'il acquiert avec le temps."
+    dofus_id: '474'
+    categories: [6]
+- model: ressources.ressource
+  pk: 34
+  fields:
+    code: noisetier
+    nom: Noisetier
+    description: "Il para\xEEt que Fouduglan s\u2019est fabriqu\xE9 un somptueux palais\
+      \ \xE0 partir de planches issues de ce bois. On vous ferait gober n\u2019importe\
+      \ quoi."
+    dofus_id: '16488'
+    categories: [6]
+- model: ressources.ressource
+  pk: 35
+  fields:
+    code: noyer
+    nom: Noyer
+    description: "Le Bois de Noyer est tr\xE8s utilis\xE9 pour confectionner des meubles.\
+      \ Pour des raisons obscures, certains charpentiers se refusent \xE0 l'utiliser\
+      \ pour leurs bateaux."
+    dofus_id: '476'
+    categories: [6]
+- model: ressources.ressource
+  pk: 36
+  fields:
+    code: oliviolet
+    nom: Oliviolet
+    description: "Ce Bois a l'air de r\xE9sister \xE0 toutes les temp\xE9ratures.\
+      \ En effet, n'essayez pas de faire un feu pour vous r\xE9chauffer, vous risqueriez\
+      \ de mourir de froid avant que le Bois ne prenne."
+    dofus_id: '2357'
+    categories: [6]
+- model: ressources.ressource
+  pk: 37
+  fields:
+    code: orme
+    nom: Orme
+    description: "Le Bois d'Orme est un des bois les plus recherch\xE9s, courant autrefois,\
+      \ il a \xE9t\xE9 d\xE9cim\xE9 il y a des lustres par la Grafioze, une sorte\
+      \ d'envo\xFBtement terrible lanc\xE9 par un Puissant Bwork Mage des Cavernes\
+      \ de la pire esp\xE8ce."
+    dofus_id: '470'
+    categories: [6]
+- model: ressources.ressource
+  pk: 38
+  fields:
+    code: tremble
+    nom: Tremble
+    description: "Cette essence de bois semble frissonner sous vos doigts. Apr\xE8\
+      s tous les coups de hache que vous lui avez ass\xE9n\xE9s, il est normal qu'elle\
+      \ ait peur de vous."
+    dofus_id: '11107'
+    categories: [6]
+- model: ressources.ressource
+  pk: 39
+  fields:
+    code: fer
+    nom: Fer
+    description: "Le fer est tr\xE8s utile pour les forgerons et pour ceux qui utilisent\
+      \ du m\xE9tal, certains s'en servent m\xEAme pour repasser."
+    dofus_id: '312'
+    categories: [7]
+- model: ressources.ressource
+  pk: 40
+  fields:
+    code: cuivre
+    nom: Cuivre
+    description: "Le Cuivre est un m\xE9tal tr\xE8s utile pour confectionner les armes\
+      \ bon march\xE9, c'est presque un ersatz de l'or si on fait abstraction de toutes\
+      \ les qualit\xE9s de l'or."
+    dofus_id: '441'
+    categories: [7]
+- model: ressources.ressource
+  pk: 41
+  fields:
+    code: bronze
+    nom: Bronze
+    description: "Ce m\xE9tal entre souvent dans la fabrication d'articles ornementaux,\
+      \ pour embellir vos armes \xE0 moindre frais, c'est le m\xE9tal id\xE9al."
+    dofus_id: '442'
+    categories: [7]
+- model: ressources.ressource
+  pk: 42
+  fields:
+    code: kobalte
+    nom: Kobalte
+    description: "Le nom \xAB Kobalte \xBB signifie \xAB cuivre du diable \xBB en\
+      \ Sadida ancien, c'est un m\xE9tal adapt\xE9 \xE0 la forge d'armes l\xE9g\xE8\
+      res et \xE9l\xE9gantes, mais avant tout mortelles."
+    dofus_id: '443'
+    categories: [7]
+- model: ressources.ressource
+  pk: 43
+  fields:
+    code: manganese
+    nom: "Mangan\xE8se"
+    description: "Contrairement \xE0 ce que tout le monde pense, ce m\xE9tal ne sert\
+      \ pas \xE0 faire des goutti\xE8res, mais plut\xF4t \xE0 faire des armes terrifiantes,\
+      \ comme le redoutable \"Tranchant Mangan\xE9sien\" qui a estourbi plus d'un\
+      \ Tofu lors des f\xEAtes du Boulgour."
+    dofus_id: '445'
+    categories: [7]
+- model: ressources.ressource
+  pk: 44
+  fields:
+    code: silicate
+    nom: Silicate
+    description: "Ce minerai provient s\xFBrement des profondes mines sombres de l'\xEE\
+      le de Pandala dans lesquelles Gardan Framine est tomb\xE9 \xE9perdument amoureux\
+      \ d'un spectre de femelle Pandawa. Comme quoi, l'amour ne conna\xEEt aucune\
+      \ limite."
+    dofus_id: '7032'
+    categories: [7]
+- model: ressources.ressource
+  pk: 45
+  fields:
+    code: etain
+    nom: "\xC9tain"
+    description: "L'Etain est un m\xE9tal mou et lourd, un peu comme le Wo Wabbit,\
+      \ mais en pire."
+    dofus_id: '444'
+    categories: [7]
+- model: ressources.ressource
+  pk: 46
+  fields:
+    code: argent
+    nom: Argent
+    description: "L'argent est un m\xE9tal brillant tr\xE8s appr\xE9ci\xE9 des bijoutiers,\
+      \ contrairement \xE0 ce que certaines personnes essaient de vous faire croire,\
+      \ il n'a aucun effet particulier sur les vampires."
+    dofus_id: '350'
+    categories: [7]
+- model: ressources.ressource
+  pk: 47
+  fields:
+    code: bauxite
+    nom: Bauxite
+    description: "Ce m\xE9tal est tr\xE8s appr\xE9ci\xE9 pour sa couleur originale\
+      \ et pour son tranchant lorsqu'il est correctement aiguis\xE9."
+    dofus_id: '446'
+    categories: [7]
+- model: ressources.ressource
+  pk: 48
+  fields:
+    code: or
+    nom: Or
+    description: "L'or est un m\xE9tal rare et pr\xE9cieux, ses qualit\xE9s intrins\xE8\
+      ques en font un m\xE9tal de choix pour la conception d'armes ou d'objets particuli\xE8\
+      rement puissants et d'esth\xE9tique raffin\xE9e."
+    dofus_id: '313'
+    categories: [7]
+- model: ressources.ressource
+  pk: 49
+  fields:
+    code: dolomite
+    nom: Dolomite
+    description: "\"Toujours dur, et incassable\" telles \xE9taient les paroles d'Irko\
+      \ le Mineur Sombre \xE0 propos du Dolomite."
+    dofus_id: '7033'
+    categories: [7]
+- model: ressources.ressource
+  pk: 50
+  fields:
+    code: obsidienne
+    nom: Obsidienne
+    description: "Assez dure pour rayer le verre et assez sombre pour vous saper le\
+      \ moral, cette roche a tout perdu de la chaleur de la lave dont elle est issue.\
+      \ En tout cas, elle sera parfaite pour une pierre tombale, tant que ce n'est\
+      \ pas la v\xF4tre."
+    dofus_id: '11110'
+    categories: [7]
+- model: ressources.ressource
+  pk: 51
+  fields:
+    code: mine
+    nom: "Entr\xE9e de Mine"
+    description: "Utile pour rejoindre une mine\u2026"
+    dofus_id: ''
+    categories: [12]
+- model: ressources.ressource
+  pk: 52
+  fields:
+    code: ble
+    nom: "Bl\xE9"
+    description: "Le Bl\xE9 est depuis la nuit des temps un ingr\xE9dient indispensable\
+      \ dans l'alimentation des habitants d'Amakna et des Tofus."
+    dofus_id: '289'
+    categories: [8]
+- model: ressources.ressource
+  pk: 53
+  fields:
+    code: orge
+    nom: Orge
+    description: "L'orge est une c\xE9r\xE9ale utilis\xE9e pour la bi\xE8re mais aussi\
+      \ pour le b\xE9tail et parfois pour les b\xE9tails buveurs de bi\xE8re."
+    dofus_id: '400'
+    categories: [8]
+- model: ressources.ressource
+  pk: 54
+  fields:
+    code: avoine
+    nom: Avoine
+    description: "Cette c\xE9r\xE9ale est utilis\xE9e pour nourrir les jeunes Tabis,\
+      \ lorsqu'ils n'ont pas encore les dents assez solides pour ruminer. Les paysans\
+      \ font tout de m\xEAme attention dans la mesure o\xF9 l'avoine cause parfois\
+      \ des crises d'a\xE9rophagie chez le b\xE9tail sensible."
+    dofus_id: '533'
+    categories: [8]
+- model: ressources.ressource
+  pk: 55
+  fields:
+    code: houblon
+    nom: Houblon
+    description: "La fleur du plant femelle de Houblon renferme les principes actifs\
+      \ utiles au brasseur, notamment les r\xE9sines am\xE8res et les huiles essentielles.\
+      \ \"Cela me rappelle mes cours de Biologie, sauf que je n'ai jamais suivi de\
+      \ cours de Biologie\". Tels \xE9taient les mots de Gabrielle Naye \xE0 la vue\
+      \ de cette description, il faut bien l'avouer l\xE9g\xE8rement romanc\xE9e."
+    dofus_id: '401'
+    categories: [8]
+- model: ressources.ressource
+  pk: 56
+  fields:
+    code: lin
+    nom: Lin
+    description: "La tige de Lin n'a rien de sp\xE9cial, si ce n'est qu'elle est capable\
+      \ de se redresser 7 fois apr\xE8s avoir \xE9t\xE9 pli\xE9e par les temp\xEA\
+      tes. C'est s\xFBrement pour cela que sa fibre est si souple."
+    dofus_id: '423'
+    categories: [8]
+- model: ressources.ressource
+  pk: 57
+  fields:
+    code: riz
+    nom: Riz
+    description: "Collant, ou m\xEAme gluant, le riz a toujours du succ\xE8s aupr\xE8\
+      s des jeunes Pandawas affam\xE9s."
+    dofus_id: '7018'
+    categories: [8]
+- model: ressources.ressource
+  pk: 58
+  fields:
+    code: seigle
+    nom: Seigle
+    description: "Cette c\xE9r\xE9ale sombre a la facult\xE9 de pousser dans des conditions\
+      \ difficiles, c'est une des rares c\xE9r\xE9ales \xE0 subsister apr\xE8s de\
+      \ fortes s\xE9cheresses."
+    dofus_id: '532'
+    categories: [8]
+- model: ressources.ressource
+  pk: 59
+  fields:
+    code: malt
+    nom: Malt
+    description: "C'est le nom donn\xE9 \xE0 l'Orge germ\xE9e. C'est un ingr\xE9dient\
+      \ de choix pour les bi\xE8res de qualit\xE9. Attention cependant, le malt est\
+      \ vicieux et a tendance \xE0 absorber la bi\xE8re lors de sa germination, un\
+      \ peu comme le Tot apr\xE8s une dure journ\xE9e de chasse aux Tofus."
+    dofus_id: '405'
+    categories: [8]
+- model: ressources.ressource
+  pk: 60
+  fields:
+    code: chanvre
+    nom: Chanvre
+    description: "La Tige de Chanvre peut \xEAtre utilis\xE9e lors de la recherche\
+      \ d'effets hallucinog\xE8nes, mais \xE9galement par les tisserands qui exploitent\
+      \ leurs fibres pour des raisons toutes autres."
+    dofus_id: '425'
+    categories: [8]
+- model: ressources.ressource
+  pk: 61
+  fields:
+    code: mais
+    nom: "Ma\xEFs"
+    description: "Les disciples d\u2019Otoma\xEF adorent faire griller \xE0 la po\xEA\
+      le cette c\xE9r\xE9ale s\xE9ch\xE9e, accompagn\xE9e de sel ou de sucre, avant\
+      \ d\u2019assister \xE0 un spectacle."
+    dofus_id: '16454'
+    categories: [8]
+- model: ressources.ressource
+  pk: 62
+  fields:
+    code: millet
+    nom: Millet
+    description: "Cette c\xE9r\xE9ale a \xE9t\xE9 d\xE9couverte et baptis\xE9 du nom\
+      \ du m\xE9nestrel Bernard, c\xE9l\xE8bre pour sa chanson sur les multiman."
+    dofus_id: '16456'
+    categories: [8]
+- model: ressources.ressource
+  pk: 63
+  fields:
+    code: frostiz
+    nom: Frostiz
+    description: "Cette c\xE9r\xE9ale est surprenante, en plus de r\xE9sister au climat\
+      \ extr\xEAme de Frigost, elle donne un go\xFBt de chocolat au lailait dans lequel\
+      \ elle est plong\xE9e."
+    dofus_id: '11109'
+    categories: [8]
+- model: ressources.ressource
+  pk: 64
+  fields:
+    code: tanche
+    nom: Tanche
+    description: "Lorsque votre chef vous a demand\xE9 de lui amener l\u2019autre\
+      \ tanche, il parlait de votre coll\xE8gue, pas d\u2019un poisson."
+    dofus_id: '16469'
+    categories: [9]
+- model: ressources.ressource
+  pk: 65
+  fields:
+    code: espadon
+    nom: Espadon
+    description: Ce poisson est un duelliste hors pair, capable de se mesurer aux
+      meilleurs bretteurs.
+    dofus_id: '16471'
+    categories: [9]
+- model: ressources.ressource
+  pk: 66
+  fields:
+    code: perche
+    nom: Perche
+    description: "Sous un air idiot se cache le plus rus\xE9 et le plus rapide des\
+      \ poissons. Mais le jeu en vaut la chandelle : son go\xFBt incomparable et sa\
+      \ saveur unique valent bien tous ces efforts."
+    dofus_id: '1801'
+    categories: [9]
+- model: ressources.ressource
+  pk: 67
+  fields:
+    code: requin
+    nom: Requin Marteau-Faucille
+    description: "Ce Requin rouge est un requin militant, d'instinct gr\xE9gaire,\
+      \ l'individu n'existe pas au sein du groupe, m\xEAme si leur chef, le Requin\
+      \ Stakanoviou est port\xE9 au rang d'idole."
+    dofus_id: '602'
+    categories: [9]
+- model: ressources.ressource
+  pk: 68
+  fields:
+    code: anguille
+    nom: Anguille
+    description: "Tel un Sram, l\u2019anguille se faufile sans difficult\xE9 dans\
+      \ les endroits les plus incongrus."
+    dofus_id: '16461'
+    categories: [9]
+- model: ressources.ressource
+  pk: 69
+  fields:
+    code: poisskaille
+    nom: Poisskaille
+    description: "Des ar\xEAtes ac\xE9r\xE9es comme les lames du Bworker, des \xE9\
+      cailles \xE9paisses comme l'\xE9corce du Ch\xEAne Mou, et des yeux noirs comme\
+      \ les plumes d'un Corbac. Ce poisson a un aspect vraiment redoutable, mais pas\
+      \ dans l'assiette o\xF9 il est tout simplement succulent."
+    dofus_id: '11106'
+    categories: [9]
+- model: ressources.ressource
+  pk: 70
+  fields:
+    code: lotte
+    nom: Lotte
+    description: "Ce poisson mort a le m\xEAme regard vitreux que votre grand-p\xE8\
+      re."
+    dofus_id: '16465'
+    categories: [9]
+- model: ressources.ressource
+  pk: 71
+  fields:
+    code: morue
+    nom: Morue
+    description: "Les morues sont victimes d\u2019une consommation intensive dans\
+      \ les quartiers populaires et un peu chaud des grandes cit\xE9s."
+    dofus_id: '16467'
+    categories: [9]
+- model: ressources.ressource
+  pk: 72
+  fields:
+    code: raie
+    nom: Raie Bleue
+    description: "La Raie Bleue domine les sols marins o\xF9 elle passe son temps\
+      \ \xE0 creuser de minuscules trous. Nul ne sait encore pourquoi. Elle remonte\
+      \ \xE0 la surface une fois de temps en temps. Juste assez souvent pour la prendre\
+      \ dans vos filets."
+    dofus_id: '1784'
+    categories: [9]
+- model: ressources.ressource
+  pk: 73
+  fields:
+    code: pane
+    nom: "Poisson Pan\xE9"
+    description: "Ce poisson cubique est connu pour avoir l'esprit particuli\xE8rement\
+      \ carr\xE9. Il est m\xEAme carr\xE9ment stupide ce qui en fait un poisson facile\
+      \ \xE0 p\xEAcher."
+    dofus_id: '1750'
+    categories: [9]
+- model: ressources.ressource
+  pk: 74
+  fields:
+    code: truite
+    nom: Truite
+    description: "La truite est un poisson assez facile \xE0 p\xEAcher et les p\xEA\
+      cheurs chevronn\xE9s les p\xEAchent trois par trois. Ils d\xE9cident souvent\
+      \ au m\xEAme moment s'il faut les manger crues ou cuites. D'o\xF9 leur parfaite\
+      \ prononciation."
+    dofus_id: '1844'
+    categories: [9]
+- model: ressources.ressource
+  pk: 75
+  fields:
+    code: goujon
+    nom: Goujon
+    description: "Petit poisson rapide d'eau douce, le goujon est le plus souvent\
+      \ p\xEAch\xE9 par les enfants et par les p\xEAcheurs d\xE9butants. Mais il ne\
+      \ nourrira pas votre famille."
+    dofus_id: '1782'
+    categories: [9]
+- model: ressources.ressource
+  pk: 76
+  fields:
+    code: greuvette
+    nom: Greuvette
+    description: "Les Greuvettes sont appr\xE9ci\xE9es pour leur couleur rose et leur\
+      \ go\xFBt raffin\xE9. Elles sont cependant d\xE9test\xE9es pour leur mauvais\
+      \ caract\xE8re l\xE9gendaire et leurs antennes gomin\xE9es."
+    dofus_id: '598'
+    categories: [9]
+- model: ressources.ressource
+  pk: 77
+  fields:
+    code: crabe
+    nom: Crabe Sourimi
+    description: "Ce crabe, \xE0 la forme si particuli\xE8re, est tr\xE8s appr\xE9\
+      ci\xE9 pour la grande quantit\xE9 de chair qu'il contient. Il est aussi le seul\
+      \ crabe p\xEAchable \xE0 la canne, car il poss\xE8de l'instinct de couper les\
+      \ fils avec ses pinces... qui elles, ne coupent pas."
+    dofus_id: '1757'
+    categories: [9]
+- model: ressources.ressource
+  pk: 78
+  fields:
+    code: chaton
+    nom: Poisson-Chaton
+    description: "Ce poisson a la particularit\xE9 d'avoir des moustaches et de ronronner\
+      \ sous l'eau, ce qui ne manque pas de faire peur aux Poissons Volants."
+    dofus_id: '603'
+    categories: [9]
+- model: ressources.ressource
+  pk: 79
+  fields:
+    code: brochet
+    nom: Brochet
+    description: "Ce poisson d'eau douce de taille moyenne est l'ami du barbecue du\
+      \ p\xEAcheur."
+    dofus_id: '1847'
+    categories: [9]
+- model: ressources.ressource
+  pk: 80
+  fields:
+    code: kralamoure
+    nom: Kralamoure
+    description: "Le Kralamoure est un grand romantique, ses yeux de petit Tofu lui\
+      \ donnent un air un peu niais, mais ne vous y m\xE9prenez pas, le Kralamoure\
+      \ est tr\xE8s agressif envers les \xE9trangers."
+    dofus_id: '600'
+    categories: [9]
+- model: ressources.ressource
+  pk: 81
+  fields:
+    code: sardine
+    nom: Sardine Brillante
+    description: "Voil\xE0 un poisson que l'on peut voir de loin. Ce qui en fait une\
+      \ cible parfaite pour les jeunes p\xEAcheurs."
+    dofus_id: '1805'
+    categories: [9]
+- model: ressources.ressource
+  pk: 82
+  fields:
+    code: bar
+    nom: Bar Rikain
+    description: "On rencontre ce poisson le plus souvent dans les lacs et cours d'eau\
+      \ qui descendent des glaciers. Sa grosseur et sa chaire fra\xEEche en font un\
+      \ animal tr\xE8s appr\xE9ci\xE9 des p\xEAcheurs."
+    dofus_id: '1779'
+    categories: [9]
+- model: ressources.ressource
+  pk: 83
+  fields:
+    code: carpe
+    nom: Carpe d'Iem
+    description: "Ce poisson est consid\xE9r\xE9 comme le plus sage parmi tous les\
+      \ poissons d'eau douce. Il ne mordra jamais votre hame\xE7on sauf s'il n'a plus\
+      \ envie de vivre."
+    dofus_id: '1794'
+    categories: [9]
+- model: ressources.ressource
+  pk: 84
+  fields:
+    code: rien
+    nom: RIEN
+    description: Quand il n'y a ABSOLUMENT RIEN !
+    dofus_id: ''
+    categories: [17]
+- model: ressources.ressource
+  pk: 85
+  fields:
+    code: dorade
+    nom: Dorade Grise
+    description: "Ce poisson a \xE9t\xE9 baptis\xE9 en r\xE9f\xE9rence \xE0 une c\xE9\
+      l\xE8bre exploratrice qui a abruti plusieurs g\xE9n\xE9rations de Iops."
+    dofus_id: '16463'
+    categories: [9]
+- model: ressources.ressource
+  pk: 86
+  fields:
+    code: egouts
+    nom: "Entr\xE9e vers les \xE9gouts"
+    description: "Sapristi, vous allez rentrer l\xE0 dedans ? Peut-\xEAtre trouverez-vous\
+      \ des objets perdus, des bijoux et plus encore !"
+    dofus_id: ''
+    categories: [1]
+- model: ressources.ressource
+  pk: 87
+  fields:
+    code: aquajou
+    nom: Bois d'aquajou
+    description: "Les charpentiers de marine \xE9vitent d'utiliser ce bois semblable\
+      \ \xE0 du corail pour fabriquer des navires ; cet interdit a probablement un\
+      \ rapport avec le fait que l'aquajou pousse dans les abysses. Les bateaux \xE9\
+      tant con\xE7us pour flotter, mieux vaut ne pas tenter le sort."
+    dofus_id: '17991'
+    categories: [6, 11]
+- model: ressources.ressource
+  pk: 88
+  fields:
+    code: ecume
+    nom: "\xC9cume de mer"
+    description: "Ce tendre min\xE9ral blanc a la couleur et la l\xE9g\xE8ret\xE9\
+      \ de l'\xE9cume, d'o\xF9 son nom. Apr\xE8s s\xE9chage, il devient dur comme\
+      \ le c\u0153ur d'une belle-m\xE8re. Sa r\xE9sistance \xE0 la chaleur et sa porosit\xE9\
+      \ en font un mat\xE9riau de choix pour la fabrication de pipes."
+    dofus_id: '17995'
+    categories: [7, 12]
+- model: ressources.ressource
+  pk: 89
+  fields:
+    code: patelle
+    nom: Patelle
+    description: "La patelle sufokienne a d\xE9laiss\xE9 les estrans rocheux afin\
+      \ de se r\xE9fugier dans les profondeurs de la baie. Pour vivre heureuse, elle\
+      \ vit cach\xE9e\u2026 mais pas suffisamment pour vous \xE9chapper."
+    dofus_id: '17995'
+    categories: [9, 14]
+- model: ressources.ressource
+  pk: 90
+  fields:
+    code: salikrone
+    nom: Salikrone
+    description: "Cette plante est \xE9galement appel\xE9e cornichon de mer, mais\
+      \ les alchimistes pr\xE9f\xE8rent utiliser le terme salikrone. Cela fait nettement\
+      \ plus classe et plus myt\xE9rieux aupr\xE8s des profanes."
+    dofus_id: '17992'
+    categories: [10, 15]
+- model: ressources.ressource
+  pk: 91
+  fields:
+    code: quisnoa
+    nom: Quisnoa
+    description: TODO
+    dofus_id: ''
+    categories: [8, 13]
